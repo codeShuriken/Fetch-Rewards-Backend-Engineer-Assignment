@@ -1,14 +1,31 @@
 # Fetch-Rewards-Backend-Engineer-Assignment
-Fetch Rewards take home assignment for backend engineer and backend engineer intern.
-
+Fetch Rewards take home assignment for backend engineer and backend engineer intern. This assignment requires us to:
+    * Add transactions for a specific payer and date.
+    * Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
+    * Return all payer point balances.
 
 ### Prerequisites
-1. Install Java 11 or higher version
+* Install Java 11 or higher version
 
-### Testing the Application
+### Running the Application
 
 #### Windows
-1. Download this project.
-2. From the root directory of the project, run the command:
+* Download this project.
+* From the root directory of the project, run the command:
 
     ``` ./mvnw clean spring-boot:run ```
+
+### Testing the REST API
+
+* ADD POINTS
+``` POST /api/v1/points/addPoints ```
+Ex: ```curl -d  '{"payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z"}' -H 'Content-Type: application/json' localhost:8080/api/v1/points/addPoints ```
+
+* SPEND POINTS
+``` POST /api/v1/points/spendPoints ```
+Ex: ``` curl -d  '{"points": 1000}' -H 'Content-Type: application/json' localhost:8080/api/v1/points/spendPoints ```
+
+* GET BALANCE
+``` GET /api/v1/points/payersBalance ```
+Ex: ``` curl -d  localhost:8080/api/v1/points/payersBalance ```
+
