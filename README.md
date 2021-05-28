@@ -12,7 +12,7 @@ Fetch Rewards take home assignment for backend engineer and backend engineer int
 
 #### Windows
 * Download this project.
-* From the root directory of the project, run the command:
+* From inside the root directory of the project, run the command:
 
     ``` ./mvnw clean spring-boot:run ```
 
