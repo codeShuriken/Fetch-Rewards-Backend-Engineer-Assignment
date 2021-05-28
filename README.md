@@ -1,8 +1,9 @@
 # Fetch-Rewards-Backend-Engineer-Assignment
 Fetch Rewards take home assignment for backend engineer and backend engineer intern. This assignment requires us to:
-    * Add transactions for a specific payer and date.
-    * Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
-    * Return all payer point balances.
+
+ * Add transactions for a specific payer and date.
+ * Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
+ * Return all payer point balances.
 
 ### Prerequisites
 * Install Java 11 or higher version
@@ -18,14 +19,20 @@ Fetch Rewards take home assignment for backend engineer and backend engineer int
 ### Testing the REST API
 
 * ADD POINTS
+   
 ``` POST /api/v1/points/addPoints ```
+   
 Ex: ```curl -d  '{"payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z"}' -H 'Content-Type: application/json' localhost:8080/api/v1/points/addPoints ```
 
 * SPEND POINTS
+   
 ``` POST /api/v1/points/spendPoints ```
+   
 Ex: ``` curl -d  '{"points": 1000}' -H 'Content-Type: application/json' localhost:8080/api/v1/points/spendPoints ```
 
 * GET BALANCE
+   
 ``` GET /api/v1/points/payersBalance ```
+   
 Ex: ``` curl -d  localhost:8080/api/v1/points/payersBalance ```
 
