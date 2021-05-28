@@ -22,7 +22,8 @@ Fetch Rewards take home assignment for backend engineer and backend engineer int
    
 ``` POST /api/v1/points/addPoints ```
 
-    Ex: ``` curl -X POST localhost:8080/api/v1/points/addPoints -H 'Content-Type: application/json' -d '{"payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z"}' ```
+   
+Ex: ``` curl -X POST localhost:8080/api/v1/points/addPoints -H 'Content-Type: application/json' -d '{"payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z"}' ```
 
 * SPEND POINTS
    
