@@ -1,0 +1,17 @@
+package com.fetchrewards.points.exceptions;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ControllerAdvice
+public class InsufficientPointsHandler {
+    @ResponseBody
+    @ExceptionHandler(InsufficientPointsException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    String insufficientPointsHandler(InsufficientPointsException ex) {
+        return ex.getMessage();
+    }
+}
